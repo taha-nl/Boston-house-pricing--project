@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Teaser</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.css') }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+         
+          <div class="navbar-collapse" id="">
+            <ul class="navbar-nav justify-content-between ">
+              <div class="User_option">
+                <li class="">
+                  <a class="mr-4" href="">
+                    Login
+                  </a>
+                  <a class="" href="">
+                    Sign up
+                  </a>
+                </li>
+              </div>
+            </ul>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+            
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 offset-md-1">
+            <div class="detail-box">
+              <h1>
+                <span> predict</span> <br>
+                house <br>
+                price
+              </h1>
+              <p>
+                predict the price and find bargain
+              </p>
+              <div class="btn-box">
+                <a href="" class="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        
+         
+            
+
+
+  
+        <div class="col-md-3">
+          <div class="info_form ">
+            
+            
+              <form action="{{ url_for('predict')}}"method="post">
+                <p>{{prediction_text}}</p>
+                <input type="text" name="CRIM" placeholder="CRIM" required="required" /><br>
+                <input type="text" name="ZN" placeholder="ZN" required="required" /><br>
+                  <input type="text" name="INDUS" placeholder="INDUS" required="required" /><br>
+                  <input type="text" name="CHAS" placeholder="CHAS" required="required" /><br>
+                  <input type="text" name="NOX" placeholder="NOX" required="required" /><br>
+                  <input type="text" name="RM" placeholder="RM" required="required" /><br>
+                  <input type="text" name="Age" placeholder="Age" required="required" /><br>
+                  <input type="text" name="DIS" placeholder="DIS" required="required" /><br>
+                  <input type="text" name="RAD" placeholder="RAD" required="required" /><br>
+                  <input type="text" name="TAX" placeholder="TAX" required="required" /><br>
+                  <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" /><br>
+                  <input type="text" name="B" placeholder="B" required="required" /><br>
+                  <input type="text" name="LSTAT" placeholder="LSTAT" required="required" /><br>
+          
+                 
+          
+                  <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+              </form>
+            
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </section>
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+</body>
+
+</html>
